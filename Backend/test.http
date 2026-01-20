@@ -1,0 +1,24 @@
+
+POST http://localhost:3001/api/v1/users
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "email":"jdoe@gmail",
+  "password":"password123"
+}
+
+### post request orders 
+POST http://localhost:3001/api/v1/orders
+Content-Type: application/json
+
+{
+  "customer_name": "John Doe",
+  "phone_number":"0798675444",
+  "items":"chciken and rice",
+  "total_price":25.50,
+  "status":"New"
+}
+
+### get request orders
+GET http://localhost:3001/api/v1/orders
