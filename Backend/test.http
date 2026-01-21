@@ -22,3 +22,18 @@ Content-Type: application/json
 
 ### get request orders
 GET http://localhost:3001/api/v1/orders
+
+### get request orders by id
+GET http://localhost:3001/api/v1/orders/1
+
+
+### patch request orders by id
+PATCH http://localhost:3001/api/v1/orders/1
+Content-Type: application/json
+
+{
+  "status":"Completed"
+}
+
+### delete request orders by id
+DELETE http://localhost:3001/api/v1/orders/1
