@@ -3,8 +3,8 @@ POST http://localhost:3001/api/v1/users
 Content-Type: application/json
 
 {
-  "name": "John Doe",
-  "email":"jdoe@gmail",
+  "name": "Man Tawa",
+  "email":"mtawa@gmail",
   "password":"password123"
 }
 
@@ -24,11 +24,11 @@ Content-Type: application/json
 GET http://localhost:3001/api/v1/orders
 
 ### get request orders by id
-GET http://localhost:3001/api/v1/orders/1
+GET http://localhost:3001/api/v1/orders/3
 
 
 ### patch request orders by id
-PATCH http://localhost:3001/api/v1/orders/1
+PATCH http://localhost:3001/api/v1/orders/2
 Content-Type: application/json
 
 {
