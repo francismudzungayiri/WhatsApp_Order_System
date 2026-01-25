@@ -1,16 +1,29 @@
 
-POST http://localhost:3001/api/v1/users
+POST http://localhost:3001/api/v1/users/register
 Content-Type: application/json
 
 {
-  "name": "Man Tawa",
-  "email":"mtawa@gmail",
-  "password":"password123"
+  "name": "ba franco",
+  "email":"bafranco@gmail.com",
+  "password":"ilovenatashamudzungayiri"
+} 
+### login user
+POST http://localhost:3001/api/v1/users/login
+Content-Type: application/json
+
+{
+  "email":"bafranco@gmail.com",
+  "password":"ilovenatashamudzungayiri"
 }
 
-### post request orders 
+### post request orders (REQUIRES LOGIN)
+# 1. Login above
+# 2. Copy the "token" string from the response
+# 3. Paste it below where it says <REPLACE_WITH_YOUR_TOKEN>
 POST http://localhost:3001/api/v1/orders
 Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo3fSwiaWF0IjoxNzY5MzI1NjgyLCJleHAiOjE3NjkzMjkyODJ9.kmJiRcMlUfrtILxkppI_1GOHHCMMbS4MKQfVkJwjZ8o
+
 
 {
   "customer_name": "John Doe",
@@ -20,20 +33,25 @@ Content-Type: application/json
   "status":"New"
 }
 
-### get request orders
+### get request orders (REQUIRES LOGIN)
 GET http://localhost:3001/api/v1/orders
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo3fSwiaWF0IjoxNzY5MzI1NjgyLCJleHAiOjE3NjkzMjkyODJ9.kmJiRcMlUfrtILxkppI_1GOHHCMMbS4MKQfVkJwjZ8o
 
 ### get request orders by id
 GET http://localhost:3001/api/v1/orders/3
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo3fSwiaWF0IjoxNzY5MzI1NjgyLCJleHAiOjE3NjkzMjkyODJ9.kmJiRcMlUfrtILxkppI_1GOHHCMMbS4MKQfVkJwjZ8o
 
 
 ### patch request orders by id
 PATCH http://localhost:3001/api/v1/orders/2
 Content-Type: application/json
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo3fSwiaWF0IjoxNzY5MzI1NjgyLCJleHAiOjE3NjkzMjkyODJ9.kmJiRcMlUfrtILxkppI_1GOHHCMMbS4MKQfVkJwjZ8o
+
 
 {
   "status":"Completed"
 }
 
 ### delete request orders by id
-DELETE http://localhost:3001/api/v1/orders/1
+DELETE http://localhost:3001/api/v1/orders/4
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjo3fSwiaWF0IjoxNzY5MzI1NjgyLCJleHAiOjE3NjkzMjkyODJ9.kmJiRcMlUfrtILxkppI_1GOHHCMMbS4MKQfVkJwjZ8o

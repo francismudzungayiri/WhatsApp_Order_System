@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
 import router from "./routes/orders.js";
-import userRouter from "./routes/users.js";
+import authRouter from "./routes/auth.js";
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ const apiVersion = express.Router();
 
 // Mount router
 apiVersion.use("/orders", router);
-apiVersion.use("/users", userRouter);
+apiVersion.use("/users", authRouter);
 
 app.use("/api/v1", apiVersion);
 
